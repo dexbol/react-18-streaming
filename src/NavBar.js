@@ -6,10 +6,18 @@
  *
  */
 
+import {styled} from 'styled-components';
+
+const StyledNav = styled.nav`
+    a {
+        color: red;
+    }
+`;
+
 export default function NavBar() {
-  return (
-    <nav>
-      <a href="/">Home</a>
-    </nav>
-  );
+    return (
+        <StyledNav>
+            <a href="/">Home</a>
+        </StyledNav>
+    );
 }

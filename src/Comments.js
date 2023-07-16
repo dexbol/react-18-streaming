@@ -6,17 +6,22 @@
  *
  */
 
+import {styled} from 'styled-components';
 import {useData} from './data';
 
+const StyledComment = styled.p`
+    font-size: 18px;
+    line-height: 1.5;
+    color: pink;
+`;
+
 export default function Comments() {
-  const comments = useData();
-  return (
-    <>
-      {comments.map((comment, i) => (
-        <p className="comment" key={i}>
-          {comment}
-        </p>
-      ))}
-    </>
-  );
+    const comments = useData();
+    return (
+        <>
+            {comments.map((comment, i) => (
+                <StyledComment key={i}>{comment}</StyledComment>
+            ))}
+        </>
+    );
 }

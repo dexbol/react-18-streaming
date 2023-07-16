@@ -6,11 +6,15 @@
  *
  */
 
+function clickHandler(event) {
+  alert(event.target.textContent);
+}
+
 export default function Sidebar() {
   return (
     <>
       <h1>Archive</h1>
-      <ul>
+      <ul onClick={clickHandler}>
         <li>May 2021</li>
         <li>April 2021</li>
         <li>March 2021</li>
